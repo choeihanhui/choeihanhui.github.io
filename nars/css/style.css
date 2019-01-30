@@ -51,10 +51,10 @@ option{padding:30px; font-size:18px; }
 .icon-login-after{width:30px; height: 30px; background-position:-600px -30px;}
 .icon-shopping{width:30px; height: 30px; background-position:-400px -30px;}
 .icon-shopping-after{width:30px; height: 30px; background-position:-700px -30px;}
-.icon-heart{width:26px; height: 30px; background-position:-400px -200px;}
-.icon-heart-active{width:26px; height: 30px; background-position:-500px -200px;}
-.icon-cart{width:26px; height: 30px; background-position:-200px -200px;}
-.icon-cart-active{width:26px; height: 30px; background-position:-300px -200px;}
+.icon-heart{width:30px; height: 30px; background-position:-400px -200px;}
+.icon-heart-active{width:30px; height: 30px; background-position:-500px -200px;}
+.icon-cart{width:30px; height: 30px; background-position:-200px -200px;}
+.icon-cart-active{width:30px; height: 30px; background-position:-300px -200px;}
 .icon-check{width:20px; height: 20px; background-position:-600px -200px;}
 .icon-utube{width: 50px; height:40px;background-position:-200px -300px;}
 .icon-facebook{width:30px; height:40px;background-position:-300px -300px;}
