@@ -13,7 +13,7 @@ li{list-style: none;}
 body{color:#0a0a0a; overflow-x: hidden;}
 a{text-decoration: none; color:#000; display: inline-block;}
 span{display: inline-block;}
-button{border: none; cursor: pointer; }
+button{border: none; cursor: pointer; outline: none;}
 img{max-width: 100%; display: block;}
 label, span{display: inline-block;}
 body{font-family:'Nanum Gothic', sans-serif; }
@@ -45,12 +45,12 @@ option{padding:30px; font-size:18px; }
 .bestseller .icon-plus-L,
 .makeup .icon-plus-L{width:50px; height: 60px; background-position:-50px -100px;}
 .icon-plus-W{width:50px; height: 60px; background-position:-50px -200px;}
-.icon-search{width:30px; height: 30px; background-position:-200px -30px; }
-.icon-search-after{width:30px; height: 30px; background-position:-500px -30px; }
-.icon-login{width:30px; height: 30px; background-position:-300px -30px; }
-.icon-login-after{width:30px; height: 30px; background-position:-600px -30px;}
-.icon-shopping{width:30px; height: 30px; background-position:-400px -30px;}
-.icon-shopping-after{width:30px; height: 30px; background-position:-700px -30px;}
+.icon-search{width:35px; height: 35px; background-position:-200px -30px; }
+.icon-search-after{width:35px; height: 35px; background-position:-500px -30px; }
+.icon-login{width:35px; height: 35px; background-position:-300px -30px; }
+.icon-login-after{width:35px; height: 35px; background-position:-600px -30px;}
+.icon-shopping{width:35px; height: 35px; background-position:-400px -30px;}
+.icon-shopping-after{width:35px; height: 35px; background-position:-700px -30px;}
 .icon-heart{width:30px; height: 30px; background-position:-400px -200px;}
 .icon-heart-active{width:30px; height: 30px; background-position:-500px -200px;}
 .icon-cart{width:30px; height: 30px; background-position:-200px -200px;}
@@ -101,7 +101,7 @@ nav .top-area {display: none;}
 .gnb i {display: none;}
 .gnb>li a:hover{color:#dddddd; background:#8b1a1e; }
 .subnav li a:hover{text-decoration: underline; background:none; }
-div.util-nav{float: right;}
+div.util-nav{float: right; width:auto;}
 
 /* Tab-manu================================================================ */
 .tab-menu{width:360px; background: #fff; float: right; display: none;}
@@ -290,7 +290,8 @@ html, body {
     background-color: #000;
     background-position-y: center;}
 .gift .img-box{ position: relative; }
-.img-box{position: relative; margin: 5px;}
+.img-box{position: relative; margin: 5px; overflow: hidden;}
+.img-box:hover .gift-wrap{top:0;}
 .img-box img{width: 100%; display: block;}
 .gift .gift-bg1{background: url(../img/gift1.jpg)no-repeat center; background-size: cover; }
 .gift .gift-bg2{background: url(../img/gift2.jpg)no-repeat center; background-size: cover; }
@@ -301,9 +302,9 @@ html, body {
 .gift .text-box{padding:40px 20px; box-sizing: border-box;}
 .gift .gift-wrap{
     position: absolute;
-    left:0; right:0; width: 100%; height: 100%;
+    top:100%; left:0; right:0; width: 100%; height: 100%;
     background: rgba(255,255,255,0.8);
-    display: none;}
+    }
 .gift2 .gift-info{left:80px; right:80px;}
 .gift-info{
   position: absolute;
@@ -486,8 +487,8 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
 
 @media (max-width:767px){
 .bestseller .icon-plus-L, .makeup .icon-plus-L {
-      width: 24px;
-      height: 24px;
+      width: 30px;
+      height: 30px;
       background-position: -134px -114px;
   }
 /*main-ad===========================================================================  */
@@ -549,7 +550,7 @@ section {position: relative; padding-top: 100px;}
   .gift-info-big {left:0;top:0;right:0;bottom: 0;}
   /* 기프트 1번째 그룹*/
   .gift .gift-info h3 { font-size: 20px; margin-top: 15px;}
-  .gift .gift-info p { font-size: 14px;padding: 20px 20px;}
+  .gift .gift-info p { font-size: 14px; padding: 5px 5px;}
   .gift .gift-info a { font-size: 15px;}
   /* 로그인 팝업창 */
   .login-popup {
