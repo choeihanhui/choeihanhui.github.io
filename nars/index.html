@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NARS|코스메틱</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="shortcut icon" href="img/nars.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCEcV6VTsiFTp1Ghi98Cb_cBccw0wdiiw&callback=initMap"></script>
+</head>
+<body>
+  <header>
+    <h1><a href="#" class="icon icon-logo"><span class="blind">NARS</span></a></h1>
+
+    <div class="center">
+      <div class="user-info">
+        <span><b>홍길동</b>님 반갑습니다.</span>
+        <button id="btn-logout">logout</button>
+      </div>
+      <div class="util-nav">
+        <button class="icon icon-search"><span class="blind">search</span></button>
+        <button class="icon icon-login"><span class="blind">login</span></button>
+        <button class="icon icon-shopping"><span class="blind">shopping</span></button>
+      </div>
+    </div>
+    <!-- 모바일 환경에서 보이는 메뉴 -->
+    <button class="btn-menu icon icon-bar">
+      <span class="blind">메뉴</span>
+    </button>
+
+    <!-- 네비게이션/검색/로그인/장바구니 -->
+    <nav class="center">
+      <!-- 모바일 환경에서 보이는 로고 닫기버튼 -->
+      <div>
+      <div class="top-area">
+        <h1><a href="#" class="icon icon-logo-L"><span class="blind">NARS</span></a></h1>
+        <button class="icon icon-del"><span class="blind">닫기</span></button>
+      <!-- manu  -->
+      </div>
+      <ul class="gnb">
+        <li><a href="#">NEW <i class="icon icon-arrow-down"></i></a>
+          <ul class="subnav">
+            <li><a href="#">신제품</a></li>
+            <li><a href="#">뉴 컬렉션</a></li>
+            <li><a href="#">How-to Film</a></li>
+          </ul>
+        </li>
+        <li><a href="#">BEST SELLERS<i class="icon icon-arrow-down"></i></a>
+          <ul class="subnav">
+            <li><a href="#">어워드 위너</a></li>
+            <li><a href="#">오르가즘 컬렉션</a></li>
+            <li><a href="#">컬트 클래식</a></li>
+          </ul>
+        </li>
+        <li><a href="#">MAKEUP<i class="icon icon-arrow-down"></i></a>
+          <ul class="subnav">
+            <li><a href="#">립</a></li>
+            <li><a href="#">치크</a></li>
+            <li><a href="#">페이스</a></li>
+            <li><a href="#">아이</a></li>
+            <li><a href="#">멀티유즈</a></li>
+            <li><a href="#">아이코닉NARS</a></li>
+          </ul>
+        </li>
+        <li><a href="#">SKIN CARE<i class="icon icon-arrow-down"></i></a>
+          <ul class="subnav">
+            <li><a href="#">나스스킨</a></li>
+            <li><a href="#">메이크업 리무머</a></li>
+            <li><a href="#">프라이머</a></li>
+            <li><a href="#">틴티드 모이스처라이저</a></li>
+          </ul>
+        </li>
+        <li><a href="#">BRUSHES<i class="icon icon-arrow-down"></i></a>
+          <ul class="subnav">
+            <li><a href="#">Brushes</a></li>
+            <li><a href="#">Tool</a></li>
+          </ul>
+        </li>
+        <li><a href="#">PALETTES&GIFTS<i class="icon icon-arrow-down"></i></a>
+          <ul class="subnav">
+            <li><a href="#">아이 팔레트</a></li>
+            <li><a href="#">립 팔레트</a></li>
+            <li><a href="#">치크 팔레트</a></li>
+          </ul class="subnav">
+        </li>
+        <li><a href="#">FRANCOIS NARS<i class="icon icon-arrow-down"></i></a>
+          <ul class="subnav">
+            <li><a href="#">프랑수아 나스 소개</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+      <!-- 탭메뉴 -->
+      <div class="center">
+        <div class="tab-menu active">
+        <h2 class="blind">장바구니, 위시리스트</h2>
+        <ul class="tab-nav">
+          <li class="shopping"><a href="#tab1" class="active">Shopping Cart</a></li>
+          <li class="wish"><a href="#tab2">Wish List</a></li>
+        </ul>
+
+        <div class="tab-contents">
+          <div id="tab1">
+            <!-- 모두선택하기 체크박스  -->
+            <div class="select">
+              <label for="select-all"><input type="checkbox" id="select-all"><i class="icon icon-check"></i>
+               선택상품 <span class="select-num">1</span> 건 </label>
+            </div>
+            <div class="tab-contents-body">
+              <div class="cart">
+                <ul>
+                  <li>
+                    <label for="check"><input type="checkbox" id="check"><i class="icon icon-check"></i></label>
+                    <div class="cart-image products">
+                      <a href="#"><img src="img/product_swiper_1.jpg" alt="shopping"></a>
+                    </div>
+                    <dl class="cart-infos">
+                      <dt>듀오 아이 쉐도우 함마메트</dt>
+                      <dd>수량
+                        <div class="count">
+                          <button class="icon icon-minus" ></button>
+                          <span class="num">1</span>
+                          <button class="icon icon-plus"></button>
+                        </div>
+                      </dd>
+                      <dd>가격 : <span>43,000</span>원</dd>
+                    </dl>
+                    <div class="btn-group">
+                      <button class="icon icon-heart"></button>
+                      <button class="icon icon-transh"></button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 총결제 금액  -->
+            <div class="cart-total">
+              <p>총 결제 금액 : <span>43,000</span>원</p>
+              <a href="#">선택상품주문</a>
+              <a href="#">선택상품삭제</a>
+            </div>
+          </div>
+        <!--wish -->
+          <div id="tab2">
+            <div class="select">
+              <label for="select-all2"><input type="checkbox" id="select-all2"><i class="icon icon-check"></i>
+               선택상품 <span class="select-num">1</span> 건 </label>
+            </div>
+            <div class="tab-contents-body">
+              <div class="wish">
+                <ul>
+                  <li>
+                    <label for="check2"><input type="checkbox" id="check2"><i class="icon icon-check"></i></label>
+                    <div class="wish-image products">
+                      <a href="#"><img src="img/product_swiper_1.jpg" alt="shopping"></a>
+                    </div>
+                    <dl class="cart-infos">
+                      <dt>듀오 아이 쉐도우 함마메트</dt>
+                      <dd>가격 : <span>43,000</span>원</dd>
+                    </dl>
+                    <div class="btn-group">
+                      <button class="icon icon-cart"></button>
+                      <button class="icon icon-transh"></button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cart-total">
+              <a href="#">선택상품주문</a>
+              <a href="#">선택상품삭제</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+
+    <!-- 검색창 -->
+    <div class="search">
+      <h2 class="blind">검색창</h2>
+      <form action="#">
+        <input type="text" placeholder="NARS 검색하세요 ">
+        <button type="submit" class="icon  icon-search-W"><span class="blind">검색</span></button>
+      </form>
+    </div>
+  </header>
+  <!-- header종료 -->
+
+  <section>
+    <!-- 신제품 광고 -->
+    <article class="main-ad">
+      <h2 class="blind">신제품 광고</h2>
+      <!-- Swiper -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide main_img1">
+            <div class="swiper-text center">
+              <h3>FOR YOUR LIPS ONLY</h3>
+              <p>Enjoy a Audacious Lipstick</p>
+              <a href="#">VIEW MORE</a>
+            </div>
+          </div>
+          <div class="swiper-slide main_img2">
+            <div class="swiper-text center">
+              <h3>SUPERNATURALS</h3>
+              <p>새로워진 슈퍼네츄럴시리즈 빛나는 피부를 완성해보세요.</p>
+              <a href="#">VIEW MORE</a>
+            </div>
+          </div>
+          <div class="swiper-slide main_img3">
+            <div class="swiper-text center">
+              <h3>RADIANCE. REPOWERED</h3>
+              <p>피부 향상 라인업 으로 빛나는 피부를 확인하세요</p>
+              <a href="#">VIEW MORE</a>
+            </div>
+          </div>
+          <div class="swiper-slide main_img4">
+            <div class="swiper-text center">
+              <h3>THE NARS MULTIPLE SERIES</h3>
+              <p>당신의 피부을 아름답게 보일수 있는 위대한 작품 바로 확인하세요</p>
+              <a href="#">VIEW MORE</a>
+            </div>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+         <div class="swiper-pagination"></div>
+      </div>
+    </article>
+
+    <!-- 베스트 셀러 영역  -->
+    <article class="bestseller">
+      <h2><a href="#">BEST SELLER <i class="icon icon-plus-L"></i></a></h2>
+      <!-- Swiper -->
+      <div class="wrap">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/product_swiper_1.jpg" alt="블러쉬오르가즘">
+              <dl class="bastseller-text">
+                <dt>블러쉬<span>오르가즘</span></dt>
+                <dd>나스의 아이코닉 블러쉬 쉐이드입니다<br>자연스러운 컬러로 건강하고 생기 있는 치크를 연출해보세요</dd>
+                <dd>₩ 40,000</dd>
+              </dl>
+              <div class="btn-group">
+                <button class="icon icon-heart"></button>
+                <button class="icon icon-cart"></button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/product_swiper_2.jpg" alt="어데이셔스 립스틱 도미니크">
+              <dl class="bastseller-text">
+                <dt>어데이셔스 립스틱<span>도미니크</span></dt>
+                <dd>드라마틱한 입체감<br>멈출 수 없는 개성</dd>
+                <dd>₩ 41,000</dd>
+              </dl>
+              <div class="btn-group">
+                <button class="icon icon-heart"></button>
+                <button class="icon icon-cart"></button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/product_swiper_3.jpg" alt="일루미네이터오르가즘">
+              <dl class="bastseller-text">
+                <dt>일루미네이터<span>오르가즘</span></dt>
+                <dd>자연스럽게 밝은 톤의 피부를 만들어<br> 주는 일루미네이터</dd>
+                <dd>₩ 41,000</dd>
+              </dl>
+              <div class="btn-group">
+                <button class="icon icon-heart"></button>
+                <button class="icon icon-cart"></button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/product_swiper_4.jpg" alt="멀티플오르가즘">
+              <dl class="bastseller-text">
+                <dt>멀티플<span>오르가즘</span></dt>
+                <dd>치크, 입술, 바디에 모두 사용할 수 있는 <br>멀티유즈 스틱입니다</dd>
+                <dd>₩ 55,000</dd>
+              </dl>
+              <div class="btn-group">
+                <button class="icon icon-heart"></button>
+                <button class="icon icon-cart"></button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/product_swiper_5.jpg" alt="퓨어 래디언트 틴티드 모이스처라이저">
+              <dl class="bastseller-text">
+                <dt>퓨어 래디언트 틴티드<br> 모이스처라이저</dt>
+                <dd>투명한 컬러막을 형성하며 <br>자외선을 차단해 줍니다</dd>
+                <dd>₩ 63,000</dd>
+              </dl>
+              <div class="btn-group">
+                <button class="icon icon-heart"></button>
+                <button class="icon icon-cart"></button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/product_swiper_6.jpg" alt="올데이 루미너스 웨이트리스 파운데이션">
+              <dl class="bastseller-text">
+                <dt>올데이 루미너스 웨이트리스<span>파운데이션</span></dt>
+                <dd>놀라울 정도로 자연스러운 <br>커버력과 공기처럼 가벼운 밀착력</dd>
+                <dd>₩ 67,000</dd>
+              </dl>
+              <div class="btn-group">
+                <button class="icon icon-heart"></button>
+                <button class="icon icon-cart"></button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/product_swiper_7.jpg" alt="쉬어 립스틱 돌체 비타">
+              <dl class="bastseller-text">
+                <dt>쉬어 립스틱<span>돌체 비타</span></dt>
+                <dd>은은하게 빛나는 컬러 피그먼트와 반투명한<br> 포뮬러가 결합되어 세련된 광택을 선사합니다</dd>
+                <dd>₩ 37,000</dd>
+              </dl>
+              <div class="btn-group">
+                <button class="icon icon-heart"></button>
+                <button class="icon icon-cart"></button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/product_swiper_8.jpg" alt="벳 매트 립 펜슬 듀오">
+              <dl class="bastseller-text">
+                <dt><span>벨벳 매트 립 펜슬</span>듀오</dt>
+                <dd>강렬한 컬러 반짝이는 스타일 그리고 <br>강렬함과 펜슬의 편리함. 두 배로 예뻐지세요</dd>
+                <dd>₩ 42,000</dd>
+              </dl>
+              <div class="btn-group">
+                <button class="icon icon-heart"></button>
+                <button class="icon icon-cart"></button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/product_swiper_9.jpg" alt="스파이크드 어데이셔스 립스틱">
+              <dl class="bastseller-text">
+                <dt>스파이크드 어데이셔스 립스틱</dt>
+                <dd>스터드가 담긴 사랑 리미티드 에디션 쉐이드로 <br>강렬한 스타일을 연출하세요.</dd>
+                <dd>₩ 41,000</dd>
+              </dl>
+              <div class="btn-group">
+                <button class="icon icon-heart"></button>
+                <button class="icon icon-cart"></button>
+              </div>
+            </div>
+          </div>
+          <!-- Add Arrows -->
+        </div>
+        <div class="swiper-button-prev"><i class="icon icon-left"></i></div>
+        <div class="swiper-button-next"><i class="icon icon-right"></i></div>
+      </div>
+    </article>
+
+    <!-- 메이크업 영역 -->
+    <article class="makeup center">
+      <h2><a href="#">MAKEUP <i class="icon icon-plus-L"></i></a></h2>
+      <!-- 메이크업 링크영역 -->
+      <div class="make-wrap">
+        <ul class="row">
+          <li class="col-sm-4 col-xs-6">
+            <div class="wrap">
+              <img src="img/lips.jpg" alt="">
+              <span>LIPS</span>
+              <a href="#" class="view">VIEW MORE</a>
+            </div>
+          </li>
+          <li class="col-sm-4 col-xs-6">
+            <div class="wrap">
+              <img src="img/cheeks.jpg" alt="CHEEKS">
+              <span>CHEEKS</span>
+              <a href="#" class="view">VIEW MORE</a>
+            </div>
+          </li>
+          <li class="col-sm-4 col-xs-6">
+            <div class="wrap">
+              <img src="img/face.jpg" alt="FACE">
+              <span>FACE</span>
+              <a href="#" class="view">VIEW MORE</a>
+            </div>
+          </li>
+          <li class="col-sm-4 col-xs-6">
+            <div class="wrap">
+              <img src="img/eyes.jpg" alt="EYES">
+              <span>EYES</span>
+              <a href="#" class="view">VIEW MORE</a>
+            </div>
+          </li>
+          <li class="col-sm-4 col-xs-6">
+            <div class="wrap">
+              <img src="img/multi-use.jpg" alt="MULTI-USE">
+              <span>MULTI-USE</span>
+              <a href="#" class="view">VIEW MORE</a>
+            </div>
+          </li>
+          <li class="col-sm-4 col-xs-6">
+            <div class="wrap">
+              <img src="img/iconicnars.jpg" alt="ICONIC NARS">
+              <span>ICONIC NARS</span>
+              <a href="#" class="view">VIEW MORE</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 선물하기 영역  -->
+    <article class="gift">
+      <!-- 선물 링크 -->
+      <div class="title">
+        <a href="#"><h2>GIFT</h2><i class="icon icon-plus-W"></i></a>
+      </div>
+
+      <div class="wrapper">
+        <!--1번째 그룹  -->
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="img-box gift-bg1">
+              <div class="gift-wrap">
+                <div class="gift-info gift-info-big">
+                  <h3>나이트 가든 아이섀도우<br> 팔레트</h3>
+                  <p>플라워 가든을 연상시키는 아이 섀도우 팔레트로 꽃처럼 아름다운 아이 메이크업을 연출하세요</p>
+                  <a href="#" class="view">VIEW MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="text-box">
+              <h3>가장아름다운 선물 NARS</h3>
+              <p>당신의 소중한 분에게<br> 아름다움을 선물하세요</p>
+              <a href="#" class="view">VIEW MORE</a>
+            </div>
+          </div>
+        </div>
+
+        <!--2번째 그룹  -->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="img-box gift-bg2">
+              <div class="gift-wrap">
+                <div class="gift-info gift-info-big">
+                  <h3>나스시스트 원티드<br> 아이섀도우 팔레트</h3>
+                  <p>리미티드 에디션 아이섀도우 팔레트로 매혹적인 눈가를 표현하세요.</p>
+                  <a href="#" class="view">VIEW MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6 ">
+            <div class="img-box gift-bg3">
+              <div class="gift-wrap">
+                <div class="gift-info">
+                  <h3>언드레스드 리퀴드 립 세트 </h3>
+                  <p>여름날의 눈부신 태양빛을 떠오르게 하는 누드톤과 핑크톤의 리퀴드 립.</p>
+                  <a href="#" class="view">VIEW MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="img-box gift-bg4">
+              <div class="gift-wrap">
+                <div class="gift-info">
+                  <h3>나스시스트 원티드<br> 파워 팩 립 키트 </h3>
+                  <p>감각적인 고발색 컬러와 뛰어난 지속력의 매트 피니시를 두 배로 선사합니다</p>
+                  <a href="#" class="view">VIEW MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </article>
+
+    <!-- 스토어 검색영역 ========================================================  -->
+    <article class="store center">
+      <button id="btn-store">STORE SESARCH <i class="icon icon-arrow-down-w"></i></button>
+      <div class="title">
+        <h2>NARS STORES</h2>
+        <span>매장정보</span>
+      </div>
+
+      <!-- 매장지역/주소검색 -->
+      <div class="row">
+        <div class="col-sm-6">
+          <h3 class="blind">매장지역/주소검색</h3>
+          <div class="wrap">
+            <form action="#" class="location-search">
+              <div class="input-group">
+                <label for="area" class="blind">지역선택</label>
+                <select id="area" name="area">
+                  <option value="" disabled selected>지역을 선택해주세요</option>
+                  <option value="">서울</option>
+                  <option value="">부산</option>
+                  <option value="">경기</option>
+                  <option value="">인천</option>
+                  <option value="">대구</option>
+                  <option value="">광주</option>
+                  <option value="">대전</option>
+                  <option value="">제주</option>
+                </select>
+                <input type="text" placeholder="주소를 입력해주세요">
+              </div>
+              <div class="checkbox-group ">
+                <label><input type="checkbox"><i class="icon icon-check"></i>백화점</label>
+                <label><input type="checkbox"><i class="icon icon-check"></i>NARS Boutique</label>
+                <label><input type="checkbox"><i class="icon icon-check"></i>Sephora</label>
+              </div>
+              <button>Location Search</button>
+            </form>
+            <!-- 나스위치찾기 주소 결과 -->
+            <div class="store-result">
+              <div class="top-area">
+                서울특별시 서초구 중심으로<span class="location">‘shinsegae’</span>검색결과<span class="num">3</span>건
+              </div>
+              <div class="result-list">
+                <ul class="active">
+                  <li>
+                    <a href="#" >
+                      <b>SHINSEGAE - SSG YEONGDEUNGPO (1.32km)</b>
+                      <p>1f 9 Yeongjung-Ro<br> Yeongdeungpo-Gu Seoul,<br> 07305 82226394173</p>
+                    </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <b>GALLERIA WEST DEPT STORE (10.38 Km)</b>
+                      <p>1f 343 Apgujeong-Dong
+                      Gangnam-Gu <br>
+                      Seoul, 06008 <br>
+                      82269053747
+                      </p>
+                    </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <b>HYUNDAI MIA (14.20 Km)</b>
+                      <p>1f 315 Dongsomun-Ro
+                        Seongbuk-Gu
+                        Seoul, 02730
+                        82221171099</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 구글 연동 지도 -->
+        <div class="col-sm-6">
+          <h3 class="blind">구글지도</h3>
+          <div id="map"></div>
+        </div>
+      </div>
+    </article>
+  </section>
+  <!-- section 종료 -->
+
+  <!-- footer -->
+  <footer>
+    <div class="center">
+      <ul class="etc-nav">
+        <li><a href="#">브랜드 뉴스</a></li>
+        <li><a href="#">STORES</a></li>
+        <li><a href="#">이벤트</a></li>
+        <li><a href="#">고객 서비스</a></li>
+        <li><a href="#">채용정보</a></li>
+        <li><a href="#">지역변경</a></li>
+      </ul>
+      <ul class="sns">
+        <li><a herf="#"><i class="icon icon-utube"></i></a></li>
+        <li><a herf="#"><i class="icon icon-facebook"></i></a></li>
+        <li><a herf="#"><i class="icon icon-twiter"></i></a></li>
+        <li><a herf="#"><i class="icon icon-kakao"></i></a></li>
+        <li><a herf="#"><i class="icon icon-instar"></i></a></li>
+      </ul>
+
+      <div class="bottom-area">
+        <div class="policy">
+          <a href="#">개인정보보호정책</a>
+          <a href="#">이용약관</a>
+        </div>
+        <small>© 2017 NARS Cosmetics.  All Rights Reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 로그인 팝업창 -->
+  <div class="login-popup">
+    <!-- 기존고객 -->
+    <h2 class="blind">로그인팝업창</h2>
+    <!-- <img src="" alt="NARS"> -->
+
+    <div class="popup-body">
+      <div class="btn-close">
+        <button class="icon icon-del"></button>
+      </div>
+      <div class="wrap login">
+        <h3>기존고객</h3>
+        <form action="#">
+          <div class="input-group">
+            <label for="id" class="blind">아이디</label>
+            <input type="text" placeholder="아이디" id="id">
+          <!-- <p class="message">아이디를 입력하세요</p> -->
+            <label for="password" class="blind">비밀번호</label>
+            <input type="password" id="password" placeholder="비밀번호">
+          </div>
+          <!-- <p class="message">비밀번호를 입력하세요</p> -->
+          <button type="button" id="btn-login">로그인</button>
+        </form>
+        <p class="find-info">
+          <a href="#">아이디찾기</a>
+          <a href="#">비밀번호찾기</a>
+        </p>
+      </div>
+      <div class="wrap sns">
+        <h3>아래계정로그인</h3>
+        <div class="row">
+          <a href="#" class="icon icon-kakao-C"></a>
+          <a href="#" class="icon icon-naver-C"></a>
+          <a href="#" class="icon icon-facebook-C"></a>
+        </div>
+      </div>
+      <div class="wrap new">
+        <h3>신규고객</h3>
+        <p>회원가입하신 후 다양한 서비스를 이용해보세요.</p>
+        <a href="#">회원가입</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
