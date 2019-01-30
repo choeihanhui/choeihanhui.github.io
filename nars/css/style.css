@@ -45,12 +45,12 @@ option{padding:30px; font-size:18px; }
 .bestseller .icon-plus-L,
 .makeup .icon-plus-L{width:50px; height: 60px; background-position:-50px -100px;}
 .icon-plus-W{width:50px; height: 60px; background-position:-50px -200px;}
-.icon-search{width:40px; height: 40px; background-position:-200px -30px; }
-.icon-search-after{width:40px; height: 40px; background-position:-500px -30px; }
-.icon-login{width:40px; height: 40px; background-position:-300px -30px; }
-.icon-login-after{width:40px; height: 40px; background-position:-600px -30px;}
-.icon-shopping{width:40px; height: 40px; background-position:-400px -30px;}
-.icon-shopping-after{width:40px; height: 40px; background-position:-700px -30px;}
+.icon-search{width:35px; height: 35px; background-position:-200px -30px; }
+.icon-search-after{width:35px; height: 35px; background-position:-500px -30px; }
+.icon-login{width:35px; height: 35px; background-position:-300px -30px; }
+.icon-login-after{width:35px; height: 35px; background-position:-600px -30px;}
+.icon-shopping{width:35px; height: 35px; background-position:-400px -30px;}
+.icon-shopping-after{width:35px; height: 35px; background-position:-700px -30px;}
 .icon-heart{width:40px; height: 40px; background-position:-400px -200px;}
 .icon-heart-active{width:40px; height: 40px; background-position:-500px -200px;}
 .icon-cart{width:40px; height: 40px; background-position:-200px -200px;}
@@ -303,8 +303,7 @@ html, body {
     position: absolute;
     left:0; right:0; width: 100%; height: 100%;
     background: rgba(255,255,255,0.8);
-    display: none;
-    transition: 0.5s;}
+    display: none;}
 .gift2 .gift-info{left:80px; right:80px;}
 .gift-info{
   position: absolute;
@@ -426,7 +425,7 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
   header {width: 100%; height: 100px; position: fixed;}
   header h1 {margin:0px auto; height: 100px;}
   .user-info { float: right; margin-top: -100px;}
-  h1 a.icon-logo {background-position:-50px -600px;}
+  h1 a.icon-logo {background-position:-50px -600px; width: 105px; }
   .util-nav{margin-top: -70px;}
   .icon-bar{
       display: inline;
