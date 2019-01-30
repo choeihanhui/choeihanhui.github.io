@@ -101,7 +101,7 @@ nav .top-area {display: none;}
 .gnb i {display: none;}
 .gnb>li a:hover{color:#dddddd; background:#8b1a1e; }
 .subnav li a:hover{text-decoration: underline; background:none; }
-div.util-nav{float: right; padding-right: 20px;}
+div.util-nav{float: right; padding-right: 10px;}
 
 /* Tab-manu================================================================ */
 .tab-menu{width:360px; background: #fff; float: right; display: none;}
@@ -427,7 +427,7 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
   header h1 {margin:0px auto; height: 100px;}
   .user-info { float: right; margin-top: -100px;}
   h1 a.icon-logo {background-position:-50px -600px; width: 105px; }
-  .util-nav{margin-top: -70px;}
+  .util-nav{margin-top: -70px; clear: both; float: none; text-align: right;}
   .icon-bar{
       display: inline;
       text-align: left;
