@@ -100,7 +100,6 @@ nav .top-area {display: none;}
 .gnb>li ul li a{line-height: 50px; color:#ffffff; font-size: 18px; padding: 0px 40px; }
 .gnb i {display: none;}
 .gnb>li a:hover{color:#dddddd; background:#8b1a1e; }
-/* .gnb>li:hover .subnav{display: block;} */
 .subnav li a:hover{text-decoration: underline; background:none; }
 div.util-nav{float: right;}
 
@@ -304,10 +303,8 @@ html, body {
     position: absolute;
     left:0; right:0; width: 100%; height: 100%;
     background: rgba(255,255,255,0.8);
-    opacity: 0;
-    transition: 0.5s;
-            }
-.gift .img-box:hover .gift-wrap{opacity: 1;}
+    display: none;
+    transition: 0.5s;}
 .gift2 .gift-info{left:80px; right:80px;}
 .gift-info{
   position: absolute;
@@ -386,7 +383,7 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
   border-top:2px solid #0a0a0a; border-bottom: 2px solid #0a0a0a;}
 .popup-body .btn-close{text-align: right; margin-right: 20px; margin-top: 20px; height: 50px;}
 .popup-body .wrap{width: 450px; margin: auto; margin-bottom: 30px;}
-.popup-body .wrap h3{font-size:32px; margin-bottom: 40px;}
+.popup-body .wrap h3{font-size:32px; margin-bottom: 30px; margin-top: 10px;}
 .input-group{float: left;}
 .input-group input[type=text],
  input[type=password]{
