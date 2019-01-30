@@ -101,7 +101,7 @@ nav .top-area {display: none;}
 .gnb i {display: none;}
 .gnb>li a:hover{color:#dddddd; background:#8b1a1e; }
 .subnav li a:hover{text-decoration: underline; background:none; }
-div.util-nav{float: right; width:auto;}
+div.util-nav{float: right; padding-right: 20px;}
 
 /* Tab-manu================================================================ */
 .tab-menu{width:360px; background: #fff; float: right; display: none;}
