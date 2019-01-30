@@ -45,16 +45,16 @@ option{padding:30px; font-size:18px; }
 .bestseller .icon-plus-L,
 .makeup .icon-plus-L{width:50px; height: 60px; background-position:-50px -100px;}
 .icon-plus-W{width:50px; height: 60px; background-position:-50px -200px;}
-.icon-search{width:35px; height: 35px; background-position:-200px -30px; }
-.icon-search-after{width:35px; height: 35px; background-position:-500px -30px; }
-.icon-login{width:35px; height: 35px; background-position:-300px -30px; }
-.icon-login-after{width:35px; height: 35px; background-position:-600px -30px;}
-.icon-shopping{width:35px; height: 35px; background-position:-400px -30px;}
-.icon-shopping-after{width:35px; height: 35px; background-position:-700px -30px;}
-.icon-heart{width:40px; height: 40px; background-position:-400px -200px;}
-.icon-heart-active{width:40px; height: 40px; background-position:-500px -200px;}
-.icon-cart{width:40px; height: 40px; background-position:-200px -200px;}
-.icon-cart-active{width:40px; height: 40px; background-position:-300px -200px;}
+.icon-search{width:30px; height: 30px; background-position:-200px -30px; }
+.icon-search-after{width:30px; height: 30px; background-position:-500px -30px; }
+.icon-login{width:30px; height: 30px; background-position:-300px -30px; }
+.icon-login-after{width:30px; height: 30px; background-position:-600px -30px;}
+.icon-shopping{width:30px; height: 30px; background-position:-400px -30px;}
+.icon-shopping-after{width:30px; height: 30px; background-position:-700px -30px;}
+.icon-heart{width:26px; height: 30px; background-position:-400px -200px;}
+.icon-heart-active{width:26px; height: 30px; background-position:-500px -200px;}
+.icon-cart{width:26px; height: 30px; background-position:-200px -200px;}
+.icon-cart-active{width:26px; height: 30px; background-position:-300px -200px;}
 .icon-check{width:20px; height: 20px; background-position:-600px -200px;}
 .icon-utube{width: 50px; height:40px;background-position:-200px -300px;}
 .icon-facebook{width:30px; height:40px;background-position:-300px -300px;}
@@ -485,7 +485,11 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
 }
 
 @media (max-width:767px){
-
+.bestseller .icon-plus-L, .makeup .icon-plus-L {
+      width: 24px;
+      height: 24px;
+      background-position: -134px -114px;
+  }
 /*main-ad===========================================================================  */
 section {position: relative; padding-top: 100px;}
 .main-ad{height: 600px;}
@@ -511,7 +515,7 @@ section {position: relative; padding-top: 100px;}
 
   /* 베스트 셀러 영역=====================================================  */
   .bestseller h2{width:100%; }
-  .bestseller h2 a{font-size: 38px; margin: 50px auto;}
+  .bestseller h2 a{font-size: 25px; margin: 50px auto;}
   .bestseller h2 a i{vertical-align: middle;}
   .bestseller .wrap {padding: 0;}
   .bestseller .swiper-container{}
@@ -521,14 +525,13 @@ section {position: relative; padding-top: 100px;}
   /* 메이크업 영역======================================================== */
   .make-wrap .row li{}
   .makeup .wrap span{font-size: 18px;}
-  .makeup h2 a { margin: 50px auto; font-size: 38px;}
+  .makeup h2 a { margin: 50px auto; font-size: 25px;}
   .make-wrap .wrap { padding: 5px;}
   /* 기프트 영역======================================================== */
   .gift {margin-top:0px;}
 
   .gift .title{width: 100%; height: 100px; background:#000;}
   .gift .title a h2 {
-      font-weight: lighter;
       display: inline-block;
       font-size: 2em;
       margin: 0;
