@@ -149,6 +149,13 @@ $(function(){
       // $('.text-box').height(imgW);
     }).resize();
 
+    var up=$('.img-box').index();
+    $('.gift-bg').on({
+      mouseenter:function(){
+      console.log(up);
+      }
+    })
+
     //스토어 탭메뉴
     $('.result-list ul').click(function(e){
       e.preventDefault();
