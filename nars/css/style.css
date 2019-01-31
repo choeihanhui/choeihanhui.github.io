@@ -51,7 +51,7 @@ option{padding:30px; font-size:18px; }
 .icon-login-after{width:35px; height: 35px; background-position:-600px -30px;}
 .icon-shopping{width:35px; height: 35px; background-position:-400px -30px;}
 .icon-shopping-after{width:35px; height: 35px; background-position:-700px -30px;}
-.icon-heart{width:30px; height: 30px; background-position:-400px -200px;}
+.icon-heart{width:40px; height: 40px; background-position:-400px -200px;}
 .icon-heart-active{width:30px; height: 30px; background-position:-500px -200px;}
 .icon-cart{width:30px; height: 30px; background-position:-200px -200px;}
 .icon-cart-active{width:30px; height: 30px; background-position:-300px -200px;}
@@ -102,6 +102,7 @@ nav .top-area {display: none;}
 .gnb>li a:hover{color:#dddddd; background:#8b1a1e; }
 .subnav li a:hover{text-decoration: underline; background:none; }
 div.util-nav{float: right; padding-right: 10px;}
+div.util-nav .icon{display: block; float: left;}
 
 /* Tab-manu================================================================ */
 .tab-menu{width:360px; background: #fff; float: right; display: none;}
@@ -243,7 +244,7 @@ html, body {
 .bestseller .bastseller-text dd:nth-of-type(1){height: 70px; line-height: 24px;}
 .bestseller .bastseller-text dd:nth-of-type(2){font-size: 18px; position: absolute; bottom: 20px;}
 .bestseller .btn-group{position: absolute; bottom:0; right: 0;}
-.bestseller .btn-group button{}
+.bestseller .btn-group .icon {display: block; float: left;}
 
 /* 메이크업 영역==================================================== */
 .makeup{}
@@ -261,9 +262,9 @@ html, body {
 .makeup .wrap span{position:absolute; top:20px; width:95%; font-family:'NanumGothicLight', sans-serif;
                   text-align: center; font-size: 30px;}
 .makeup .wrap a{position: absolute; background:rgba(0, 0, 0, 0.8); text-align: center;
-                font-size: 18px; transition: 0.6s; transform: translateX(-50%); margin-left: 50%;
+                font-size: 18px; transition: 0.6s; transform: translateX(-50%); margin-left: 50%; visibility: hidden;
                 color: #fff; font-size: 18px; bottom:50px; padding:10px 20px; box-sizing: border-box; opacity:0;}
-.makeup .wrap:hover .view{opacity: 1;}
+.makeup .wrap:hover .view{opacity: 1; visibility: visible;}
 
 /* 기프트 영역====================================================================== */
 .gift *{transition: 0.5s;}
@@ -427,7 +428,7 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
   header h1 {margin:0px auto; height: 100px;}
   .user-info { float: right; margin-top: -100px;}
   h1 a.icon-logo {background-position:-50px -600px; width: 105px; }
-  .util-nav{margin-top: -70px; clear: both; float: none; text-align: right;}
+  .util-nav{margin-top: -70px;}
   .icon-bar{
       display: inline;
       text-align: left;
