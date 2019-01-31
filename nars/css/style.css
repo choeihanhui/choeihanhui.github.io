@@ -375,7 +375,7 @@ footer .bottom-area{clear: both; padding: 20px 0;}
 footer .bottom-area small{color: #ccc;}
 footer .policy a{color:#ddd; padding:0 20px 0 0;}
 /* 로그인 팝업창 ========================================================= */
-.login-popup {position: fixed; background: rgba(255, 255, 255, 0.65); top:0; width:100%; height: 100%; z-index:999; display: none;}
+.login-popup {position: fixed; background: rgba(255, 255, 255, 0.65); top:0; width:100%; height: 100%; z-index:10; display: none;}
 .login-popup button{}
 .login-popup .popup-body{
   margin: 100px auto;
@@ -439,7 +439,8 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
       height: 40px;
       background-position: -50px -300px;}
   /* 네비게이션 닫기 버튼 */
-  nav.center{position: absolute; top: 0;left:-100%; width: 100%; background: white; height: auto; display: none;}
+  nav.center{position: absolute; top: 0;left:-100%; width: 100%; z-index: 997;
+              background: white; height: auto; display: none;}
   nav div.top-area{display: block;}
   h1 a.icon-logo-L{height:50px; width:110px; background-position:-50px -600px; margin:25px 0; }
   .top-area .icon-del {
@@ -472,7 +473,7 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
   .gnb li>ul li a{color:#0a0a0a; padding-left:0; }
   .bestseller {background: #f6f6f6;}
   /* 검색창 */
-  .search {height: 150px; position: absolute; top: 100px;}
+  .search {height: 150px; position: absolute; top: 100px; z-index: 996;}
   .search form {line-height: 150px;}
   .search form input[type=text] {
       display: inline-block;
@@ -486,8 +487,12 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
 .gift-info p{font-size: 10px; padding: 5px 0;}
 }
 
-@media (max-width:767px){
+@media (max-width:767px ){
 .tab-menu { width: 100%; }
+.tab-contents .tab-contents-body{
+  overflow-y: scroll;
+  height: auto;
+}
 .bestseller .icon-plus-L, .makeup .icon-plus-L {
       width: 30px;
       height: 30px;
