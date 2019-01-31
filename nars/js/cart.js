@@ -5,7 +5,7 @@ $(function(){
   $('.icon-shopping').on({
     click:function(){
       $(this).toggleClass('icon-shopping icon-shopping-after');
-      $('.tab-menu').toggle();
+      $('.tab-menu').toggle();      
     }
   })
 
