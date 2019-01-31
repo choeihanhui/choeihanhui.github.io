@@ -26,6 +26,7 @@ $(function(){
     click:function(){
       $('nav.center').show();
       $('nav.center').stop().animate({'left':'0'},1000);
+      $('.search').hide();
     }
   });
   $('.top-area button').on({
