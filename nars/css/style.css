@@ -52,9 +52,9 @@ option{padding:30px; font-size:18px; }
 .icon-shopping{width:35px; height: 35px; background-position:-400px -30px;}
 .icon-shopping-after{width:35px; height: 35px; background-position:-700px -30px;}
 .icon-heart{width:40px; height: 40px; background-position:-400px -200px;}
-.icon-heart-active{width:30px; height: 30px; background-position:-500px -200px;}
-.icon-cart{width:30px; height: 30px; background-position:-200px -200px;}
-.icon-cart-active{width:30px; height: 30px; background-position:-300px -200px;}
+.icon-heart.on{background-position:-500px -200px;}
+.icon-cart{width:40px; height: 40px; background-position:-200px -200px;}
+.icon-cart.on{background-position:-300px -200px;}
 .icon-check{width:20px; height: 20px; background-position:-600px -200px;}
 .icon-utube{width: 50px; height:40px;background-position:-200px -300px;}
 .icon-facebook{width:30px; height:40px;background-position:-300px -300px;}
@@ -124,14 +124,14 @@ div.util-nav .icon{display: block; float: left;}
 }
 .tab-contents .select{background:#ddd; line-height: 30px; }
 .tab-contents .select label i{vertical-align: middle; margin:0 10px;}
-.tab-contents .tab-contents-body{ overflow-y: scroll;}
+.tab-contents .tab-contents-body{ overflow-y: scroll;height: 500px;}
 .tab-contents-body div ul li label{vertical-align: top}
 /* Shopoing Cart */
 .tab-contents-body .cart,
 .tab-contents-body .wish { padding:10px;  box-sizing: border-box;}
 .tab-contents-body .cart ul{}
 .tab-contents-body .cart ul li,
-.tab-contents-body .wish ul li{border-bottom: 2px solid #ddd;}
+.tab-contents-body .wish ul li{border-bottom: 2px solid #ddd; margin-top: 10px;}
 .tab-contents-body .cart ul li .products,
 .tab-contents-body .wish ul li .products{
           width:100px; height:100px; display: inline-block; margin-left: 10px;
@@ -139,7 +139,7 @@ div.util-nav .icon{display: block; float: left;}
 .cart-infos{display:inline-block; margin-left: 10px; width: 180px;}
 .cart-infos dt{font-weight: bold;}
 .cart-infos dd{margin: 10px 0; vertical-align: middle; height:30px; }
-.cart-infos dd > div{display: inline; vertical-align:middle; }
+.cart-infos dd > div{display: inline; vertical-align:middle;padding-left: 20px; }
 .cart-infos dd > div >button{position: relative; bottom: -4px;}
 .tab-contents .btn-group{text-align: right;}
 /* 총금액 표시 */
@@ -147,7 +147,7 @@ div.util-nav .icon{display: block; float: left;}
 .cart-total p{background-color: #ddd; height: 80px; line-height: 80px; margin-bottom: 30px;}
 .cart-total a{padding:10px 20px; border:2px solid #8d1a1e; color:#8d1a1e;}
 .cart-total a:hover{background-color:#8d1a1e; color:#fff; }
-
+.num{padding:0 10px;}
 /* Shopoing Cart */
 
 
@@ -459,7 +459,7 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
       right: 10px;
       float: right;}
   /* 네비게이션  모바일 */
-  .gnb{background: white; border:none; position: relative; width: 100%;}
+  .gnb{background: white; border:none; position: relative; width: 100%; bottom: 0;}
   .gnb li{clear:both; width:100%; }
   .gnb>li>a { display: block; width:100%;}
   .gnb i{display: block;float: right; transform: translateY(50%);}
@@ -487,6 +487,7 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
 }
 
 @media (max-width:767px){
+.tab-menu { width: 100%; }
 .bestseller .icon-plus-L, .makeup .icon-plus-L {
       width: 30px;
       height: 30px;
