@@ -85,18 +85,32 @@ $(function(){
         }
       }
     }
-    $('.tab-contents-body ul li').on('click','.icon-transh',function(){
-        $(this).each(function(){
-        if ($(this).data('key')==key) {
-          $('.btn-group').find('.icon-heart').removeClass('on');
-        }else{
-          $('.btn-group').find('.icon-cart').removeClass('on');
-        }
-      })
+    $('.tab-contents-body ul').on('click','.icon-transh',function(e){
+      // e.preventDefault();
+      // var contents=$(this).parents('.wish').attr('id');
+      // if (contents=='wish') {
+      //   $('.btn-group').parents('.swiper-slide').each(function(){
+      //     var key=$('.swiper-slide').data('key');
+      //     console.log(key);
+      //     if($('.swiper-wrapper div').data('key')==key) {
+      //       console.log(key);
+      //       $('.btn-group').find('.icon-heart').removeClass('on');
+      //     }
+      //   })
+      // } else {
+      //
+      // }
       $(this).parents('li').remove();
+      //   $(this).each(function(){
+        //   if ($(this).data('key')==key) {
+          //     $('.btn-group').find('.icon-heart').removeClass('on');
+          //   }else{
+            //     $('.btn-group').find('.icon-cart').removeClass('on');
+            //   }
+            // })
+            // $(this).parents('li').remove();
     })
   })
-
 
 
 })
