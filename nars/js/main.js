@@ -86,24 +86,7 @@ $(function(){
       $('.icon-login').removeClass('icon-login-after');
     }
   })
-  //장바구니 \위시리스트
-  $('.icon-shopping').on({
-    click:function(){
-      $(this).toggleClass('icon-shopping icon-shopping-after');
-      $('.tab-menu').toggle();
-    }
-  })
 
-  // 탭 메뉴
-  var flag=true;
-  $('.tab-nav a').click(function(e){
-    e.preventDefault();
-    id=$(this).attr('href');
-    $('.tab-nav a').removeClass('active');
-    $(this).addClass('active');
-    $('.tab-contents > div ').hide();
-    $(id).show();
-  })
 
   var swiper = new Swiper('.main-ad .swiper-container', {
         spaceBetween: 30,
@@ -148,7 +131,7 @@ $(function(){
       $('.img-box').height(imgW);
       // $('.text-box').height(imgW);
     }).resize();
-    
+
     //스토어 탭메뉴
     $('.result-list ul').click(function(e){
       e.preventDefault();
