@@ -5,9 +5,19 @@ $(function(){
   $('.icon-shopping').on({
     click:function(){
       $(this).toggleClass('icon-shopping icon-shopping-after');
-      $('.tab-menu').toggle();      
+      $('.tab-menu').toggle();
     }
   })
+  //체크박스
+  $('#tab1 input[type=checkbox]').click('lavel',function(){
+
+    if ($(this).prop('checked')==true) {
+      $('.all').attr('checked',true);
+    } else {
+      $('.all').attr('checked',false);
+    }
+  })
+
 
   // 탭 메뉴
   var flag=true;
@@ -37,7 +47,7 @@ $(function(){
         // $('#tab2 ul').empty();
         $('#tab2 ul').append(
           '<li data-key="'+key+'">'+
-            '<label for="check2"><input type="checkbox" id="check2"><i class="icon icon-check"></i></label>'+
+            '<label for="check2"><input type="checkbox" id="check2" name="product"><i class="icon icon-check"></i></label>'+
             '<div class="wish-image products"><a href="#"><img src="'+src+'" alt="shopping"></a></div>'+
             '<dl class="cart-infos">'+
               '<dt>'+name+'</dt>'+
@@ -54,7 +64,7 @@ $(function(){
         //장바구니 넣기
         $('#tab1 ul').append(
             '<li data-key="'+key+'">'+
-              '<label for="check2"><input type="checkbox" id="check2"><i class="icon icon-check"></i></label>'+
+              '<label for="check1"><input type="checkbox" id="check1" class="all"><i class="icon icon-check"></i></label>'+
               '<div class="wish-image products"><a href="#"><img src="'+src+'" alt="shopping"></a></div>'+
               '<dl class="cart-infos">'+
                 '<dt>'+name+'</dt>'+
