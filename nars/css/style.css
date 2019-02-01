@@ -102,7 +102,7 @@ nav .top-area {display: none;}
 .gnb>li a:hover{color:#dddddd; background:#8b1a1e; }
 .subnav li a:hover{text-decoration: underline; background:none; }
 div.util-nav{float: right; padding-right: 10px;}
-div.util-nav .icon{display: block; float: left; margin-right: 10px;}
+div.util-nav .icon{display: block; float: left; margin-right: 5px;}
 
 /* Tab-manu================================================================ */
 .tab-menu{width:360px; background: #fff; float: right; display: none;}
@@ -452,7 +452,7 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
     display: inline-block;
     position: relative;
     right: 20px;
-    top:-80px;
+    top:-45px;
     float: right;
   }
   .icon-del {
@@ -466,7 +466,7 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
   .gnb{background: white; border:none; position: relative; width: 100%; bottom: 0;}
   .gnb li{clear:both; width:100%; }
   .gnb>li>a { display: block; width:100%;}
-  .gnb i{display: block;float: right; transform: translateY(50%);}
+  .gnb i{display: block;float: right; transform: translateY(90%);}
 
   /* 2depth메뉴 */
   .gnb li>ul{background: #ffffff; border-top:2px solid #0a0a0a; border-bottom:2px solid #0a0a0a; position: relative;}
@@ -476,7 +476,7 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
   .gnb li>ul li a{color:#0a0a0a; padding-left:0; }
   .bestseller {background: #f6f6f6;}
   /* 검색창 */
-  .search {height: 150px; position: absolute; top: 100px; z-index: 996;}
+  .search {height: 150px; position: absolute; z-index: 996;}
   .search form {line-height: 150px;}
   .search form input[type=text] {
       display: inline-block;
