@@ -426,7 +426,7 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
  }
 }
 @media(max-width:1210px){
-  section {padding-top: 100px;}
+  section {padding-top: 50px;}
   header {width: 100%; height: 50px; position: fixed;}
   header h1 {margin:0px auto; height: 50px;}
   .user-info { float: right; margin-top: -100px;}
