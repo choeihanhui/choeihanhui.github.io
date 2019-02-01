@@ -102,7 +102,7 @@ nav .top-area {display: none;}
 .gnb>li a:hover{color:#dddddd; background:#8b1a1e; }
 .subnav li a:hover{text-decoration: underline; background:none; }
 div.util-nav{float: right; padding-right: 10px;}
-div.util-nav .icon{display: block; float: left;}
+div.util-nav .icon{display: block; float: left; margin-right: 10px;}
 
 /* Tab-manu================================================================ */
 .tab-menu{width:360px; background: #fff; float: right; display: none;}
@@ -303,6 +303,7 @@ html, body {
 .gift .text-box{padding:40px 20px; box-sizing: border-box;}
 .gift .gift-wrap{
     opacity: 0;
+    visibility: hidden;
     transition: 0.5s;
     position: absolute;
     top:0; left:0; right:0; width: 100%; height: 100%;
@@ -426,17 +427,17 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
 }
 @media(max-width:1210px){
   section {padding-top: 100px;}
-  header {width: 100%; height: 100px; position: fixed;}
-  header h1 {margin:0px auto; height: 100px;}
+  header {width: 100%; height: 50px; position: fixed;}
+  header h1 {margin:0px auto; height: 50px;}
   .user-info { float: right; margin-top: -100px;}
-  h1 a.icon-logo {background-position:-50px -600px; width: 105px; }
-  .util-nav{margin-top: -70px;}
+  h1 a.icon-logo {background-position:-50px -600px; width: 100px; height: 50px; margin-top:0;}
+  .util-nav{margin-top: -45px;}
   .icon-bar{
       display: inline;
       text-align: left;
       width: 40px;
       position: absolute;
-      top: 30px;
+      top: 8px;
       left: 10px;
       height: 40px;
       background-position: -50px -300px;}
@@ -501,7 +502,7 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
       background-position: -134px -114px;
   }
 /*main-ad===========================================================================  */
-section {position: relative; padding-top: 100px;}
+section {position: relative; padding-top: 50px;}
 .main-ad{height: 600px;}
 .main_img1{background-image: url(../img/mob1.jpg); background-size: cover;}
 .main_img2{background-image: url(../img/mob2.jpg); background-size: cover;}
