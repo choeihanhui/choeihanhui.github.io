@@ -464,16 +464,16 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
       float: right;}
   /* 네비게이션  모바일 */
   .gnb{background: white; border:none; position: relative; width: 100%; bottom: 0;}
-  .gnb li{clear:both; width:100%; }
+  .gnb li{clear:both; width:100%; border-bottom: 1px solid #000;}
   .gnb>li>a { display: block; width:100%;}
   .gnb i{display: block;float: right; transform: translateY(90%);}
-
+  .gnb li>ul>li:last-child{border-bottom: none;}
   /* 2depth메뉴 */
   .gnb li>ul{background: #ffffff; border-top:2px solid #0a0a0a; border-bottom:2px solid #0a0a0a; position: relative;}
   .gnb li>ul>li{font-size: 20px; clear: both;  text-align: left;
                 border-bottom: 2px solid #ddd; width:100%;
                 margin-left:80px;}
-  .gnb li>ul li a{color:#0a0a0a; padding-left:0; }
+  .gnb li>ul li a{color:#0a0a0a; padding-left:0; padding-right: 60%;}
   .bestseller {background: #f6f6f6;}
   /* 검색창 */
   .search {height: 150px; position: absolute; z-index: 996;}
