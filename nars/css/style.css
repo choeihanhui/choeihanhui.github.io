@@ -112,7 +112,7 @@ div.util-nav .icon{display: block; float: left;}
 .tab-nav li a{
   display: block; line-height: 50px; padding: 0 20px;
   text-align: center; border:2px solid #ddd;}
-.tab-nav li a.active{background: #0a0a0a; border:2px solid #0a0a0a; color:#ddd;}
+.tab-nav li a.active{background: #0a0a0a; color:#ddd;}
 .tab-contents{ position: relative;}
 .tab-contents > div{
   /* 컨텐츠 겹치기 */
