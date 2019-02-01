@@ -84,7 +84,7 @@
 	margin: 0 auto;
 }
 
-
+.blind{display: none;}
 .billboard .caption a,
 .billboard .caption a i,
 .subscription a.start_btn,
@@ -253,7 +253,7 @@ header nav ul li a:hover{
 	font-size: 22px;
 	color: #4d4d4d;
 	text-transform: uppercase;
-	letter-spacing: 50;
+	letter-spacing: 50px;
 }
 
 .services ul li p{
