@@ -15,9 +15,11 @@ $(function(){
         }
       });
     }else{
-      $('.gnb > li > a').click(function(){
-        $(this).find('i').toggleClass('icon-arrow-down icon-arrow-up');
-        $(this).next('.subnav').stop().slideToggle();
+      $('.gnb > li > a').on({
+        click:function(){
+          $(this).find('i').toggleClass('icon-arrow-down icon-arrow-up');
+          $(this).next('.subnav').stop().slideToggle();
+        }       
       })
     }
   }).resize();
@@ -25,14 +27,14 @@ $(function(){
   $('.icon-bar').on({
     click:function(){
       $('nav.center').show();
-      $('nav.center').stop().animate({'left':'0'},1000);
+      $('nav.center').stop().animate({'left':'0'},800);
       $('.search').hide();
     }
   });
   $('.top-area button').on({
     click:function(){
       $('nav.center').fadeOut();
-      $('nav.center').stop().animate({'left':'-100%'},1000);
+      $('nav.center').stop().animate({'left':'-100%'},800);
     }
   });
   // 검색창
