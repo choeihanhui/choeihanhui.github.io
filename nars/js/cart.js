@@ -10,9 +10,10 @@ $(function(){
   })
   //체크박스 쇼핑카트
   $('#tab1 input[type=checkbox]').click('lavel',function(){
-
     if ($(this).prop('checked')==true) {
       $('.all').attr('checked',true);
+      var test = $(this).val();
+      console.log(test);
     } else {
       $('.all').attr('checked',false);
     }
