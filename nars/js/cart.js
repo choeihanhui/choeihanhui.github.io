@@ -8,7 +8,7 @@ $(function(){
       $('.tab-menu').toggle();
     }
   })
-  //체크박스
+  //체크박스 쇼핑카트
   $('#tab1 input[type=checkbox]').click('lavel',function(){
 
     if ($(this).prop('checked')==true) {
@@ -17,7 +17,14 @@ $(function(){
       $('.all').attr('checked',false);
     }
   })
-
+  //체크박스 위시리스트
+  $('#tab2 input[type=checkbox]').click('lavel',function(){
+    if ($(this).prop('checked')==true) {
+      $('.all').attr('checked',true);
+    } else {
+      $('.all').attr('checked',false);
+    }
+  })
 
   // 탭 메뉴
   var flag=true;
@@ -47,7 +54,7 @@ $(function(){
         // $('#tab2 ul').empty();
         $('#tab2 ul').append(
           '<li data-key="'+key+'">'+
-            '<label for="check2"><input type="checkbox" id="check2" name="product"><i class="icon icon-check"></i></label>'+
+            '<label for="check2"><input type="checkbox" id="check2" name="product" class="all"><i class="icon icon-check"></i></label>'+
             '<div class="wish-image products"><a href="#"><img src="'+src+'" alt="shopping"></a></div>'+
             '<dl class="cart-infos">'+
               '<dt>'+name+'</dt>'+
@@ -96,29 +103,26 @@ $(function(){
       }
     }
     $('.tab-contents-body ul').on('click','.icon-transh',function(e){
-      // e.preventDefault();
-      // var contents=$(this).parents('.wish').attr('id');
-      // if (contents=='wish') {
-      //   $('.btn-group').parents('.swiper-slide').each(function(){
-      //     var key=$('.swiper-slide').data('key');
-      //     console.log(key);
-      //     if($('.swiper-wrapper div').data('key')==key) {
-      //       console.log(key);
-      //       $('.btn-group').find('.icon-heart').removeClass('on');
-      //     }
-      //   })
-      // } else {
-      //
-      // }
+      e.preventDefault();
+      var contents=$(this).parents('.wish').attr('id');
+      if (contents=='wish') {
+        $('.btn-group').parents('.swiper-slide').each(function(){
+          if($('.swiper-wrapper div').data('key')==key) {
+            $('.btn-group').find('.icon-heart').removeClass('on');
+          }
+        })
+      } else {
+        console.log('뭐를삭제하냐');
+      }
       $(this).parents('li').remove();
-      //   $(this).each(function(){
-        //   if ($(this).data('key')==key) {
-          //     $('.btn-group').find('.icon-heart').removeClass('on');
-          //   }else{
-            //     $('.btn-group').find('.icon-cart').removeClass('on');
-            //   }
-            // })
-            // $(this).parents('li').remove();
+        $(this).each(function(){
+          if ($(this).data('key')==key) {
+              $('.btn-group').find('.icon-heart').removeClass('on');
+            }else{
+                $('.btn-group').find('.icon-cart').removeClass('on');
+              }
+            })
+            $(this).parents('li').remove();
     })
   })
 
