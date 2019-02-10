@@ -78,7 +78,7 @@ option{padding:30px; font-size:18px; }
 .active{display:block;}
 .nav-active{color:#dddddd; background:#8b1a1e; }
 /* header ========================================================= */
-header {width:100%; height: 150px; position:relative; z-index:30;
+header {width:100%; height: 150px; position:fixed; z-index:30;
         border-bottom: 1px solid #0a0a0a; background-color: #ffffff;}
 header h1 {text-align:center; height: 100px;}
 h1 a.icon-logo {width:130px; height: 55px; background-position:-50px -30px; margin-top: 25px}
