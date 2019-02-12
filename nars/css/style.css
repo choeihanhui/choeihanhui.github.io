@@ -78,7 +78,7 @@ option{padding:30px; font-size:18px; }
 .active{display:block;}
 .nav-active{color:#dddddd !important; background:#8b1a1e; }
 /* header ========================================================= */
-header {width:100%; height: 150px; position:fixed; z-index:30;
+header {width:100%; height: 150px; position:fixed; z-index:30; transition: 0.5s;
         border-bottom: 1px solid #0a0a0a; background-color: #ffffff;}
 header h1 {text-align:center; height: 100px;}
 h1 a.icon-logo {width:130px; height: 55px; background-position:-50px -30px; margin-top: 25px}
@@ -444,9 +444,9 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
       height: 40px;
       background-position: -50px -300px;}
   /* 네비게이션 닫기 버튼 */
-  nav.center{position: absolute; top: 0;left:-100%; width: 100%; z-index: 997;
-              background: white; height: auto; display: none;}
-  nav div.top-area{display: block;}
+  nav.center{position: fixed; top: 0;left:-100%; width: 100%; z-index: 997;
+              background: white; display: none;}
+  nav div.top-area{display: block; height: 100px;}
   h1 a.icon-logo-L{height:50px; width:110px; background-position:-50px -600px; margin:25px 0; }
   .top-area .icon-del {
     width: 40px;
@@ -465,7 +465,7 @@ footer .policy a{color:#ddd; padding:0 20px 0 0;}
       right: 10px;
       float: right;}
   /* 네비게이션  모바일 */
-  .gnb{background: white; border:none; position: relative; width: 100%; bottom: 0;}
+  .gnb{background: white; border:none; position: relative; width: 100%; bottom: 0; overflow-y: scroll;}
   .gnb li{clear:both; width:100%; border-bottom: 1px solid #000;}
   .gnb>li>a { display: block; width:100%;}
   .gnb i{display: block;float: right; transform: translateY(90%);}
