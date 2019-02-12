@@ -8,25 +8,6 @@ $(function(){
       $('.tab-menu').toggle();
     }
   })
-  //체크박스 쇼핑카트
-  $('#tab1 input[type=checkbox]').click('lavel',function(){
-    if ($(this).prop('checked')==true) {
-      $('.all').attr('checked',true);
-      var test = $(this).val();
-      console.log(test);
-    } else {
-      $('.all').attr('checked',false);
-    }
-  })
-  //체크박스 위시리스트
-  $('#tab2 input[type=checkbox]').click('lavel',function(){
-    if ($(this).prop('checked')==true) {
-      $('.all').attr('checked',true);
-    } else {
-      $('.all').attr('checked',false);
-    }
-  })
-
   // 탭 메뉴
   var flag=true;
   $('.tab-nav a').click(function(e){
@@ -55,7 +36,7 @@ $(function(){
         // $('#tab2 ul').empty();
         $('#tab2 ul').append(
           '<li data-key="'+key+'">'+
-            '<label for="check2"><input type="checkbox" id="check2" name="product" class="all"><i class="icon icon-check"></i></label>'+
+            '<label><input type="checkbox" class="wselectall"><i class="icon icon-check"></i></label>'+
             '<div class="wish-image products"><a href="#"><img src="'+src+'" alt="shopping"></a></div>'+
             '<dl class="cart-infos">'+
               '<dt>'+name+'</dt>'+
@@ -72,7 +53,7 @@ $(function(){
         //장바구니 넣기
         $('#tab1 ul').append(
             '<li data-key="'+key+'">'+
-              '<label for="check1"><input type="checkbox" id="check1" class="all"><i class="icon icon-check"></i></label>'+
+              '<label><input type="checkbox" class="sselectall"><i class="icon icon-check"></i></label>'+
               '<div class="wish-image products"><a href="#"><img src="'+src+'" alt="shopping"></a></div>'+
               '<dl class="cart-infos">'+
                 '<dt>'+name+'</dt>'+
@@ -107,7 +88,7 @@ $(function(){
       e.preventDefault();
       var contents=$(this).parents('.wish').attr('id');
       if (contents=='wish') {
-        $('.btn-group').parents('.swiper-slide').each(function(){
+        $('.btn-group').parents('.swiper-slide').find('button').each(function(){
           if($('.swiper-wrapper div').data('key')==key) {
             $('.btn-group').find('.icon-heart').removeClass('on');
           }
@@ -119,12 +100,36 @@ $(function(){
         $(this).each(function(){
           if ($(this).data('key')==key) {
               $('.btn-group').find('.icon-heart').removeClass('on');
-            }else{
-                $('.btn-group').find('.icon-cart').removeClass('on');
-              }
-            })
-            $(this).parents('li').remove();
+          }else{
+              $('.btn-group').find('.icon-cart').removeClass('on');
+            }
+          })
+          $(this).parents('li').remove();
     })
+  })
+  //체크박스 쇼핑카트
+
+  $('#tab1 input[type=checkbox]').change(function(){
+    var count = $('[type="checkbox"]').filter(':checked').length;
+    // var ckbox = $('[type="checkbox"]'),
+    //     count =0 ;
+    if ($(this).prop('checked')==true) {
+      // count = $('[type="checkbox"]:checked').length;
+      $('.sselectall').attr('checked',true);
+      console.log(count);
+      $('.num').text(count);
+    } else {
+      $('.sselectall').attr('checked',false);
+    }
+
+  })
+  // 체크박스 위시리스트
+  $('#tab2 input[type=checkbox]').click(function(){
+    if ($(this).prop('checked')==true) {
+      $('.wselectall').attr('checked',true);
+    } else {
+      $('.wselectall').attr('checked',false);
+    }
   })
 
 

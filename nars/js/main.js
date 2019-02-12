@@ -9,19 +9,25 @@ $(function(){
         mouseenter:function(){
           var i=$(this).index();
           $('.subnav').eq(i).stop().slideDown();
+          $('.gnb>li').eq(i).addClass('nav-active');
         },
         mouseleave:function(){
+          var i=$(this).index();
           $('.subnav').stop().slideUp();
+          $('.gnb>li').eq(i).removeClass('nav-active');
         }
       });
     }else{
       $('.gnb > li > a').on({
         click:function(){
+          var i=$('.gnb > li').index();
           $(this).find('i').toggleClass('icon-arrow-down icon-arrow-up');
           $(this).next('.subnav').stop().slideToggle();
-        }       
+          $(this).parent('li').toggleClass('nav-active');
+        }
       })
     }
+
   }).resize();
 
   $('.icon-bar').on({
@@ -35,8 +41,12 @@ $(function(){
     click:function(){
       $('nav.center').fadeOut();
       $('nav.center').stop().animate({'left':'-100%'},800);
+      $('.subnav').slideUp();
+      $('.gnb').find('i').removeClass('icon-arrow-up')
+      $('.gnb').find('i').addClass('icon-arrow-down')
+      $('.gnb > li').removeClass('nav-active')
     }
-  });
+  })
   // 검색창
   $('.icon-search').on({
     click:function(){
