@@ -137,15 +137,15 @@ $(function(){
     $(this).next('.num').text(count)
   })
   //체크박스 쇼핑카트
-  $('#tab1 input[type=checkbox]').change(function(){
+  $('#cart-all').change(function(){
+    console.log(count);
     var count = $('.cart').find('li').length;
+    // var number = $('.cart').find('li').data('key');
     if ($(this).prop('checked')==true) {
-      // count = $('[type="checkbox"]:checked').length;
       $('.sselectall').attr('checked',true);
       $('.select-num').text(count);
       $('.cart-total a').click(function(){
         $('.cart').find('li').remove();
-        
       })
     } else {
       $('.sselectall').attr('checked',false);
@@ -153,11 +153,11 @@ $(function(){
     }
   })
   // 체크박스 위시리스트
-  $('#tab2 input[type=checkbox]').click(function(){
+  $('#wish-all').click(function(){
     if ($(this).prop('checked')==true) {
-      $('.wselectall').attr('checked',true);
+      $('.wselectall').prop('checked',true);
     } else {
-      $('.wselectall').attr('checked',false);
+      $('.wselectall').prop('checked',false);
     }
   })
   // 수량 더하기 빼기
