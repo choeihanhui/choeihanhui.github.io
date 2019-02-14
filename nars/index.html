@@ -97,7 +97,7 @@
       </ul>
     </nav>
       <!-- 탭메뉴 -->
-      <div class="center">
+    <div class="center">
         <div class="tab-menu active">
         <h2 class="blind">장바구니, 위시리스트</h2>
         <ul class="tab-nav">
@@ -109,33 +109,13 @@
           <div id="tab1">
             <!-- 모두선택하기 체크박스  -->
             <div class="select">
-              <label for="select-all"><input type="checkbox" id="select-all" name="shoppin"><i class="icon icon-check"></i>
-               선택상품 <span class="select-num">1</span> 건 </label>
+              <label for="cart-all"><input type="checkbox" id="cart-all" name="shoppin"><i class="icon icon-check"></i>
+               선택상품 <span class="select-num"></span> 건 </label>
             </div>
             <div class="tab-contents-body">
               <div class="cart" >
                 <ul>
-                  <!-- <li>
-                    <label for="check"><input type="checkbox" id="check"><i class="icon icon-check"></i></label>
-                    <div class="cart-image products">
-                      <a href="#"><img src="img/product_swiper_1.jpg" alt="shopping"></a>
-                    </div>
-                    <dl class="cart-infos">
-                      <dt >듀오 아이 쉐도우 함마메트</dt>
-                      <dd>수량
-                        <div class="count">
-                          <button class="icon icon-minus" ></button>
-                          <span class="num">1</span>
-                          <button class="icon icon-plus"></button>
-                        </div>
-                      </dd>
-                      <dd>가격 : <span>43,000</span>원</dd>
-                    </dl>
-                    <div class="btn-group">
-                      <button class="icon icon-heart"></button>
-                      <button class="icon icon-transh"></button>
-                    </div>
-                  </li> -->
+                  <p class="nonecart">장바구니에 상품이 없습니다.</p>
                 </ul>
               </div>
             </div>
@@ -149,37 +129,24 @@
         <!--wish -->
           <div id="tab2">
             <div class="select">
-              <label for="select-all2"><input type="checkbox" id="select-all2"><i class="icon icon-check"></i>
-               선택상품 <span class="select-num">1</span> 건 </label>
+              <label for="wish-all"><input type="checkbox" id="wish-all"><i class="icon icon-check"></i>
+               선택상품 <span class="select-num"></span> 건 </label>
             </div>
             <div class="tab-contents-body">
               <div class="wish" id="wish">
                 <ul>
-                  <!-- <li>
-                    <label for="check2"><input type="checkbox" id="check2"><i class="icon icon-check"></i></label>
-                    <div class="wish-image products">
-                      <a href="#"><img src="img/product_swiper_1.jpg" alt="shopping"></a>
-                    </div>
-                    <dl class="cart-infos">
-                      <dt>듀오 아이 쉐도우 함마메트</dt>
-                      <dd>가격 : <span>43,000</span>원</dd>
-                    </dl>
-                    <div class="btn-group">
-                      <button class="icon icon-cart"></button>
-                      <button class="icon icon-transh"></button>
-                    </div>
-                  </li> -->
-                  </ul>
-                </div>
+                  <p class="nonewish">Wish List 상품이 없습니다.</p>
+                </ul>
               </div>
-              <div class="cart-total">
-                <a href="#">선택상품주문</a>
-                <a href="#">선택상품삭제</a>
-              </div>
+            </div>
+            <div class="cart-total">
+              <a href="#">선택상품주문</a>
+              <a href="#">선택상품삭제</a>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
 
     <!-- 검색창 -->
@@ -245,7 +212,7 @@
               <img src="img/product_swiper_1.jpg" alt="블러쉬오르가즘">
               <dl class="bastseller-text">
                 <dt>블러쉬<span>오르가즘</span></dt>
-                <dd>나스의 아이코닉 블러쉬 쉐이드입니다<br>자연스러운 컬러로 건강하고 생기 있는 치크를 연출해보세요</dd>
+                <dd>나스의 아이코닉 블러쉬 쉐이드입니다 자연스러운 컬러로 건강하고 생기 있는 치크를 연출해보세요</dd>
                 <dd>₩ 40,000</dd>
               </dl>
               <div class="btn-group">
@@ -257,7 +224,7 @@
               <img src="img/product_swiper_2.jpg" alt="어데이셔스 립스틱 도미니크">
               <dl class="bastseller-text">
                 <dt>어데이셔스 립스틱<span>도미니크</span></dt>
-                <dd>드라마틱한 입체감<br>멈출 수 없는 개성</dd>
+                <dd>드라마틱한 입체감 멈출 수 없는 개성</dd>
                 <dd>₩ 41,000</dd>
               </dl>
               <div class="btn-group">
@@ -269,7 +236,7 @@
               <img src="img/product_swiper_3.jpg" alt="일루미네이터오르가즘">
               <dl class="bastseller-text">
                 <dt>일루미네이터<span>오르가즘</span></dt>
-                <dd>자연스럽게 밝은 톤의 피부를 만들어<br> 주는 일루미네이터</dd>
+                <dd>자연스럽게 밝은 톤의 피부를 만들어 주는 일루미네이터</dd>
                 <dd>₩ 41,000</dd>
               </dl>
               <div class="btn-group">
@@ -281,7 +248,7 @@
               <img src="img/product_swiper_4.jpg" alt="멀티플오르가즘">
               <dl class="bastseller-text">
                 <dt>멀티플<span>오르가즘</span></dt>
-                <dd>치크, 입술, 바디에 모두 사용할 수 있는 <br>멀티유즈 스틱입니다</dd>
+                <dd>치크, 입술, 바디에 모두 사용할 수 있는 멀티유즈 스틱입니다</dd>
                 <dd>₩ 55,000</dd>
               </dl>
               <div class="btn-group">
@@ -292,8 +259,8 @@
             <div class="swiper-slide" data-key="id05">
               <img src="img/product_swiper_5.jpg" alt="퓨어 래디언트 틴티드 모이스처라이저">
               <dl class="bastseller-text">
-                <dt>퓨어 래디언트 틴티드<br> 모이스처라이저</dt>
-                <dd>투명한 컬러막을 형성하며 <br>자외선을 차단해 줍니다</dd>
+                <dt>퓨어 래디언트 틴티드 모이스처라이저</dt>
+                <dd>투명한 컬러막을 형성하며 자외선을 차단해 줍니다</dd>
                 <dd>₩ 63,000</dd>
               </dl>
               <div class="btn-group">
@@ -305,7 +272,7 @@
               <img src="img/product_swiper_6.jpg" alt="올데이 루미너스 웨이트리스 파운데이션">
               <dl class="bastseller-text">
                 <dt>올데이 루미너스 웨이트리스<span>파운데이션</span></dt>
-                <dd>놀라울 정도로 자연스러운 <br>커버력과 공기처럼 가벼운 밀착력</dd>
+                <dd>놀라울 정도로 자연스러운 커버력과 공기처럼 가벼운 밀착력</dd>
                 <dd>₩ 67,000</dd>
               </dl>
               <div class="btn-group">
@@ -317,7 +284,7 @@
               <img src="img/product_swiper_7.jpg" alt="쉬어 립스틱 돌체 비타">
               <dl class="bastseller-text">
                 <dt>쉬어 립스틱<span>돌체 비타</span></dt>
-                <dd>은은하게 빛나는 컬러 피그먼트와 반투명한<br> 포뮬러가 결합되어 세련된 광택을 선사합니다</dd>
+                <dd>은은하게 빛나는 컬러 피그먼트와 반투명한 포뮬러가 결합되어 세련된 광택을 선사합니다</dd>
                 <dd>₩ 37,000</dd>
               </dl>
               <div class="btn-group">
@@ -329,7 +296,7 @@
               <img src="img/product_swiper_8.jpg" alt="벳 매트 립 펜슬 듀오">
               <dl class="bastseller-text">
                 <dt><span>벨벳 매트 립 펜슬</span>듀오</dt>
-                <dd>강렬한 컬러 반짝이는 스타일 그리고 <br>강렬함과 펜슬의 편리함. 두 배로 예뻐지세요</dd>
+                <dd>강렬한 컬러 반짝이는 스타일 그리고 강렬함과 펜슬의 편리함. 두 배로 예뻐지세요</dd>
                 <dd>₩ 42,000</dd>
               </dl>
               <div class="btn-group">
@@ -341,7 +308,7 @@
               <img src="img/product_swiper_9.jpg" alt="스파이크드 어데이셔스 립스틱">
               <dl class="bastseller-text">
                 <dt>스파이크드 어데이셔스 립스틱</dt>
-                <dd>스터드가 담긴 사랑 리미티드 에디션 쉐이드로 <br>강렬한 스타일을 연출하세요.</dd>
+                <dd>스터드가 담긴 사랑 리미티드 에디션 쉐이드로 강렬한 스타일을 연출하세요.</dd>
                 <dd>₩ 41,000</dd>
               </dl>
               <div class="btn-group">
