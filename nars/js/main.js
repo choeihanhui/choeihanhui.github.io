@@ -1,24 +1,32 @@
 $(function(){
-
-   $(window).scroll(function (event) {
-    var lastScrollTop = 0,
-        delta = 15;
-    var windowW = $(window).width();
+   $(window).scroll(function () {
+    // var lastScrollTop = 0,
+    //     delta = 15;
+    // var windowW = $(window).width();
+    // var st = $(this).scrollTop();
+    //  if (windowW > 1210) {
+    //    if (Math.abs(lastScrollTop - st) <= delta) return;
+    //    if ((st > lastScrollTop) && (lastScrollTop > 0)) {
+    //      $("header").css("top", "-100px");
+    //    } else {
+    //      $("header").css("top", "0px");
+    //    }
+    //    lastScrollTop = st;
+    //  }
     var st = $(this).scrollTop();
-     if (windowW > 1210) {
-       if (Math.abs(lastScrollTop - st) <= delta) return;
-       if ((st > lastScrollTop) && (lastScrollTop > 0)) {
-         $("header").css("top", "-100px");
-       } else {
-         $("header").css("top", "0px");
-       }
-       lastScrollTop = st;
+     if (st>100) {
+       $("body").addClass('scroll');
+       $("header").addClass('h');
+     } else {
+       $("body").removeClass('scroll');
+       $("header").removeClass('h');
      }
+
    });
 
   $(window).resize(function(){
-    var windowW=$(window).width();
     //네비게이션
+    var windowW = $(window).width();
     $('.gnb > li').off('mouseenter mouseleave');
     $('.gnb > li >a').off('click');
     if(windowW>767){
@@ -59,11 +67,16 @@ $(function(){
 
   // 모바일 높이값 구하기
   $(window).resize(function(){
+    var width =$(window).width();
     var nav = $(window).height();
     var topareaH=$('.top-area').height();
     var gnbH = nav - topareaH
+    if (width <=1210) {
+      $('.gnb').height(gnbH);
+    }else{
+      $('.gnb').height(50);
+    }
     // console.log(gnbH);
-    $('.gnb').height(gnbH);
   }).resize();
 
   $('.top-area button').on({
