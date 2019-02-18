@@ -96,6 +96,35 @@ $(function(){
       }
     }
   })
+//카트 하트 아이콘 클릭
+$('.cart').on('click','.icon-heart',function(){
+  var popkey= $(this).parents('li').data('key');
+  var src=$(this).parents('.swiper-slide').find('img').attr('src');
+  var name=$(this).parents('.swiper-slide').find('dt').text();
+  var price=$(this).parents('.swiper-slide').find('dd').next().text();
+  var key=$(this).parents('.swiper-slide').data('key');
+  $(this).toggleClass('on');
+  if ($(this).hasClass('on')) {
+    $('#tab2 ul').append(
+      '<li data-key="'+key+'">'+
+        '<label><input type="checkbox" class="select-wish"><i class="icon icon-check"></i></label>'+
+        '<div class="wish-image products"><a href="#"><img src="'+src+'" alt="shopping"></a></div>'+
+        '<dl class="cart-infos">'+
+          '<dt>'+name+'</dt>'+
+          // '<dd>수량<div class="count"><button class="icon icon-minus" ></button><span class="num">1</span><button class="icon icon-plus"></button></div></dd>'+
+          '<dd>가격 : <span class="price">'+price+'</span>원</dd>'+
+        '</dl>'+
+        '<div class="btn-group">'+
+          '<button class="icon icon-cart"></button>'+
+          '<button class="icon icon-transh"></button>'+
+        '</div>'+
+      '</li>'
+    );
+  }else{
+
+  }
+
+})
 
   //카트 휴지통 아이콘 클릭 => 삭제
   $('.cart').on('click', '.icon-transh',function(){
@@ -205,7 +234,7 @@ $(function(){
   $('.tab-contents-body').on('change','[type="checkbox"]',function(){
     var id=$(this).parents('.tab-content').attr('id');
     var count=0;
-    if(id=='tab1'){
+    if(id=='tab1'){//장바구니 카운트
       $('#cart-all').prop('checked',false);
       $('#'+id).find('li').each(function(){
         if($(this).find('[type="checkbox"]').prop('checked')){
@@ -213,8 +242,14 @@ $(function(){
         }
       })
       $('#'+id).find('.select-num').text(count);
-    }else{
+    }else{//위시리스트 카운트
       $('#wish-all').prop('checked',false);
+      $('#'+id).find('li').each(function(){
+        if($(this).find('[type="checkbox"]').prop('checked')){
+            count++;
+        }
+      })
+      $('#'+id).find('.select-num').text(count);
     }
     totalPrice();
   })

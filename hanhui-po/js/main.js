@@ -153,7 +153,7 @@ $(function(){
 						var workimgH = $(this).find('.work-img').height();
 						var imgH = $(this).find('img').height();
 						var imgMove = imgH - workimgH;
-						console.log(workimgH, imgH, imgMove);
+						// console.log(workimgH, imgH, imgMove);
 						$(this).find('.work-img').on({
 							mouseenter:function(){
 								$(this).find('img').css('top',-imgMove);
