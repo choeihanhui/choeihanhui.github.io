@@ -106,11 +106,11 @@
         </ul>
 
         <div class="tab-contents">
-          <div id="tab1">
+          <div id="tab1" class="tab-content">
             <!-- 모두선택하기 체크박스  -->
             <div class="select">
               <label for="cart-all"><input type="checkbox" id="cart-all" name="shoppin"><i class="icon icon-check"></i>
-               선택상품 <span class="select-num"></span> 건 </label>
+               선택상품 <span class="select-num">0</span> 건 </label>
             </div>
             <div class="tab-contents-body">
               <div class="cart" >
@@ -121,16 +121,16 @@
             </div>
             <!-- 총결제 금액  -->
             <div class="cart-total">
-              <p>총 결제 금액 : <span>43,000</span>원</p>
+              <p>총 결제 금액 : <span class="totalprice">0</span>원</p>
               <a href="#">선택상품주문</a>
-              <a href="#">선택상품삭제</a>
+              <a href="#" class="select-del">선택상품삭제</a>
             </div>
           </div>
         <!--wish -->
-          <div id="tab2">
+          <div id="tab2" class="tab-content">
             <div class="select">
               <label for="wish-all"><input type="checkbox" id="wish-all"><i class="icon icon-check"></i>
-               선택상품 <span class="select-num"></span> 건 </label>
+               선택상품 <span class="select-num">0</span> 건 </label>
             </div>
             <div class="tab-contents-body">
               <div class="wish" id="wish">
@@ -141,7 +141,7 @@
             </div>
             <div class="cart-total">
               <a href="#">선택상품주문</a>
-              <a href="#">선택상품삭제</a>
+              <a href="#" class="select-del">선택상품삭제</a>
             </div>
           </div>
         </div>

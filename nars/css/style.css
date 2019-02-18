@@ -125,7 +125,7 @@ div.util-nav .icon{display: block; float: left; margin-right: 5px;}
 }
 .tab-contents .select{background:#ddd; line-height: 30px; }
 .tab-contents .select label i{vertical-align: middle; margin:0 10px;}
-.tab-contents .tab-contents-body{ overflow-y: scroll;}
+.tab-contents .tab-contents-body{ overflow-y: scroll; max-height: 300px;}
 .tab-contents-body div ul li label{vertical-align: top}
 /* Shopoing Cart */
 .tab-contents-body .cart,
